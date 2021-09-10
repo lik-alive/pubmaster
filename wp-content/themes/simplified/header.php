@@ -11,6 +11,15 @@
 	<?php wp_enqueue_style('material-design-style', get_template_directory_uri() . '/assets/plugins/material-design/css/material-design-iconic-font.min.css'); ?>
 	<?php wp_head(); ?>
 
+	<title>Publication Master</title>
+	<meta name="description" content="All papers live here" />
+
+	<meta property="og:title" content="Publication Master" />
+	<meta property="og:url" content="https://kirsh.dev/pubmaster" />
+	<meta property="og:description" content="All papers live here" />
+	<meta property="og:image" content="https://kirsh.dev/pubmaster/wp-content/themes/simplified/resources/logo_notr.png" />
+	<meta property="og:site_name" content="Publication Master" />
+	<meta property="og:type" content="website" />
 </head>
 
 <?php wp_enqueue_script('datatable', get_template_directory_uri() . '/assets/plugins/DataTables-1.10.18/datatables.min.js'); ?>
