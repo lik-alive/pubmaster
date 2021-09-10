@@ -456,7 +456,7 @@ function getScopusPapersHTML_TH($authorid)
 // 			$link = $tds->item(5)->getElementsByTagName('a')->item(0)->getAttribute('href');
 
 // 			//Check if the file already loaded
-// 			$files = glob('D:/ITNT/' . $folder . '/' . $id . '.*'); //TODO
+// 			$files = glob('D:/ITNT/' . $folder . '/' . $id . '.*');
 // 			if (sizeof($files) > 0) {
 // 				$filename = $files[0];
 // 			} else {

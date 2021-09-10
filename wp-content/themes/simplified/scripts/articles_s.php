@@ -414,7 +414,7 @@ function articles_create_or_update_json()
 			);
 
 			files_copy_uploaded_file_TH($pdffile, 'articles/' . $ID_Article);
-			g_ldv('Файл загружен', __FUNCTION__, 'wp_ab_articles', $ID_Article, null, null);
+			g_ldv('Файл загружен', __FUNCTION__, 'wp_ab_articles', $ID_Article, null);
 		}
 
 		if ($isCreate) echo g_ctj(array(1, 'Статья добавлена', $ID_Article));
@@ -425,7 +425,7 @@ function articles_create_or_update_json()
 		else echo g_ctj(array(2, 'Ошибка редактирования статьи', $ID_Article));
 		$wpdb->query('ROLLBACK');
 
-		g_ldr($e->getMessage(), $e->getData());
+		g_ldx($e->getMessage(), $e->getData());
 	} catch (Exception $e) {
 		echo g_ctj(array(2, 'Ошибка загрузки файла'));
 		$wpdb->query('ROLLBACK');
@@ -522,7 +522,7 @@ function articles_acknowledgements_add_json()
 		echo g_ctj(array(2, 'Ошибка обновления благодарностей'));
 		$wpdb->query('ROLLBACK');
 
-		g_ldr($e->getMessage(), $e->getData());
+		g_ldx($e->getMessage(), $e->getData());
 	}
 	exit();
 }
@@ -713,7 +713,7 @@ function articles_hide_json()
 		echo g_ctj(array(1, 'Статья скрыта'));
 	} catch (DataException $e) {
 		echo g_ctj(array(2, 'Ошибка сокрытия статьи'));
-		g_ldr($e->getMessage(), $e->getData());
+		g_ldx($e->getMessage(), $e->getData());
 	}
 	exit();
 }
