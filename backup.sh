@@ -1,18 +1,15 @@
+#!/bin/bash
+### INFO
+# sudo ./backup.sh <dest_folder>
+###
+
 title=pubmaster
 
 echo $title backup started
 ROOT=$1/$title
 mkdir $ROOT
 
-# Backup web files
-WEBPATH=$ROOT/web
-mkdir $WEBPATH
-#rsync -a --info=progress2 . $WEBPATH --exclude .git --exclude "files/temp"
-tar cf - --exclude ".git" --exclude "files/temp" . | pv -s $(du -sb . | awk '{print $1}') | gzip > $WEBPATH/$title.tar.gz
-
-# Backup db
-DBPATH=$ROOT/db
-mkdir $DBPATH
-mysqldump -u$2 -p$3 --databases pubdb > $DBPATH/dump.sql 2> /dev/null
+# Backup source files
+tar cf - --exclude ".git" --exclude "wp-admin" --exclude "wp-includes" --exclude "index.php" . | pv -s $(du -sb . | awk '{print $1}') | gzip > $ROOT/$title.tar.gz
 
 echo $title backup finished
