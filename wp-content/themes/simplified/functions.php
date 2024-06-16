@@ -52,9 +52,9 @@ function custom_no_robots()
 	echo '<meta name="description" content="All papers live here" />
 
 	<meta property="og:title" content="Publication Master" />
-	<meta property="og:url" content="https://kirsh.dev/pubmaster" />
+	<meta property="og:url" content="' . WP_SITEURL .  '" />
 	<meta property="og:description" content="All papers live here" />
-	<meta property="og:image" content="https://kirsh.dev/pubmaster/wp-content/themes/simplified/resources/logo_notr.png" />
+	<meta property="og:image" content="' . WP_SITEURL . '/wp-content/themes/simplified/resources/logo_notr.png" />
 	<meta property="og:site_name" content="Publication Master" />
 	<meta property="og:type" content="website" />';
 }

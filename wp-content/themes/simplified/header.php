@@ -15,9 +15,9 @@
 	<meta name="description" content="All papers live here" />
 
 	<meta property="og:title" content="Publication Master" />
-	<meta property="og:url" content="https://kirsh.dev/pubmaster" />
+	<meta property="og:url" content="<?php echo WP_SITEURL ?>" />
 	<meta property="og:description" content="All papers live here" />
-	<meta property="og:image" content="https://kirsh.dev/pubmaster/wp-content/themes/simplified/resources/logo_notr.png" />
+	<meta property="og:image" content="<?php echo WP_SITEURL ?>/wp-content/themes/simplified/resources/logo_notr.png" />
 	<meta property="og:site_name" content="Publication Master" />
 	<meta property="og:type" content="website" />
 </head>
@@ -150,7 +150,7 @@
 </script>
 
 <body>
-	<div id='intro' style='z-index:0' <?php if (substr(get_page_link(), -11) !== '/pubmaster/') echo 'hidden'; ?>>
+	<div id='intro' style='z-index:0' <?php if (WP_SITEURL !== rtrim(get_page_link(), "/")) echo 'hidden'; ?>>
 		<div id='screen'>
 			<img id='wall' width='1920px' height='1080px' src='<?php echo get_template_directory_uri() ?>/resources/wall-inv-dark.png'></img>
 			<img id='wall-light' width='1920px' height='1080px' src='<?php echo get_template_directory_uri() ?>/resources/wall-inv-light.png'></img>
@@ -165,7 +165,7 @@
 		</div>
 	</div>
 
-	<div id='sitescreen' class='d-flex flex-column' style='height:100%; <?php if (substr(get_page_link(), -11) === '/pubmaster/') echo 'display:none!important'; ?>'>
+	<div id='sitescreen' class='d-flex flex-column' style='height:100%; <?php if (WP_SITEURL === rtrim(get_page_link(), "/")) echo 'display:none!important'; ?>'>
 		<nav class="navbar fixed-top navbar-toggleable navbar-expand-md scrolling-navbar double-nav navbar-light bg-white">
 			<a class='navbar-brand' href='<?php echo esc_url(home_url('/')); ?>'>
 				<img src='<?php echo get_template_directory_uri() ?>/resources/logo-full-tr.png' width="227" height="50" class="d-inline-block align-top" alt="" />
