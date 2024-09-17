@@ -26,6 +26,7 @@ The web service was deployed on the infrastructure of Samara University, impleme
 - Bootstrap v4.1.1
 - jQuery v3.3.1
 - MySQL v8
+- Mobile-friendly
 - Dockerized
 
 ### Functionality
@@ -38,7 +39,6 @@ The web service was deployed on the infrastructure of Samara University, impleme
 - PDF-preview
 - Quick search
 - Filtering
-- Mobile-friendly
 
 ## Installation
 
