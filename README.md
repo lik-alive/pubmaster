@@ -77,7 +77,7 @@ curl https://api.wordpress.org/secret-key/1.1/salt/
 4. Change ownership
 ```sh
 sudo chown www-data:www-data .
-sudo chown www-data:www-data ./files
+sudo chown www-data:www-data ./files -R
 sudo chmod 775 .
 ```
 

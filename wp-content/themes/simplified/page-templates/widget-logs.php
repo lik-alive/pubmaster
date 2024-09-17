@@ -74,7 +74,7 @@
 	});
 </script>
 
-<?php if (wp_get_current_user()->user_login === 'secret') { ?>
+<?php if (wp_get_current_user()->ID === 1) { ?>
 	<div class='widget'>
 		<div class='info-panel'>
 			<div class='text-center'>

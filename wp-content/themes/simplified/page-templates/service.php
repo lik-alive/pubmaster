@@ -5,7 +5,7 @@
 get_header();
 
 //Redirect to 404 page on wrong user
-if (wp_get_current_user()->user_login !== 'secret') g_404();
+if (wp_get_current_user()->ID !== 1) g_404();
 
 ?>
 

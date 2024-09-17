@@ -11,7 +11,7 @@ services:
     depends_on:
       - server
     ports:
-      - 9050:80
+      - 9070:80
 
   server:
     user: "33:33"
