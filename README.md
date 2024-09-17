@@ -38,6 +38,7 @@ The web service was deployed on the infrastructure of Samara University, impleme
 - PDF-preview
 - Quick search
 - Filtering
+- Mobile-friendly
 
 ## Installation
 
