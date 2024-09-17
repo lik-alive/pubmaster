@@ -64,3 +64,9 @@ function custom_login_title($login_title)
 	return 'Publication Master';
 }
 add_filter('login_title', 'custom_login_title');
+
+// Hide admin bar
+function hide_admin_bar(){
+    return false;
+}
+add_filter( 'show_admin_bar' , 'hide_admin_bar');
