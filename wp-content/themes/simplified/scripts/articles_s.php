@@ -664,7 +664,7 @@ function getAuthorPrograms($author)
 	global $wpdb;
 	$programs = $wpdb->get_results("
 		SELECT 
-			CONCAT(p.TitleRus, ' \"', p.TitleEng, '\"') as Title
+			IF(p.TitleEng IS NULL, p.TitleRus, CONCAT(p.TitleRus, ' \"', p.TitleEng, '\"')) as Title
 		FROM 
 			wp_ab_authors a 
 				JOIN wp_ab_programs_links l ON a.ID_Author=l.ID_Author 

@@ -77,7 +77,7 @@
 		table.on('click', '.add', function() {
 			let data = table.row($(this).closest('tr')).data();
 			if (data.Journal.includes('Свидетельство')) {
-				RedirectWithData('POST', SITE_URL + '/programs/create', 'Recognize', `${data.Title}. ${data.Authors} `, '_blank');
+				RedirectWithData('POST', SITE_URL + '/programs/create', 'Recognize', `${data.Title}. ${data.Authors}`, '_blank');
 			}
 			else {
 				RedirectWithData('POST', SITE_URL + '/articles/wizard', 'Recognize', `${data.Title}. ${data.Authors} ${data.Journal}`, '_blank');

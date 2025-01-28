@@ -33,10 +33,14 @@ function getRSCIPapersHTML_TH($authorid)
 			$title = $td->find('b', 0);
 
 			$paper = [];
-			$paper['Title'] = trim($title->find('span', 0)->innerHtml);
+			if ($title->find('span')->count() > 0) {
+				$paper['Title'] = trim($title->find('span', 0)->innerHtml);
+			} else {
+				$paper['Title'] = trim($title->find('font', 0)->innerHtml);
+			}
 			if ($title->parent->tag->name() === 'a') {
 				$paper['Link'] = 'https://www.elibrary.ru/' . $title->parent->getAttribute('href');
-			}
+			} 
 			$paper['Title'] = mb_substr($paper['Title'], 0, 1) . mb_strtolower(mb_substr($paper['Title'], 1));
 
 			$authors = $td->find('i', 0);
