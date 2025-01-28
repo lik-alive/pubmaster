@@ -23,6 +23,7 @@ services:
     restart: always
     volumes:
       - .:/var/www/html
+      - ./.config/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
     depends_on:
       - mysql
 
