@@ -177,16 +177,16 @@
 				<ul class="nav navbar-nav ml-auto dropdown">
 					<?php $url = get_permalink(); ?>
 					<li class="nav-item">
-						<?php $href = esc_url(home_url('/')) . 'articles/'; ?>
-						<a class="nav-link <?php if ($url === $href) echo 'active' ?>" href='<?php echo $href ?>'>Публикации</a>
+						<?php $href = esc_url(home_url('/')) . 'articles'; ?>
+						<a class="nav-link <?php if (mb_strpos($url, $href) === 0) echo 'active' ?>" href='<?php echo $href ?>'>Публикации</a>
 					</li>
 					<li class="nav-item">
-						<?php $href = esc_url(home_url('/')) . 'conferences/'; ?>
-						<a class="nav-link <?php if ($url === $href) echo 'active' ?>" href='<?php echo $href ?>'>Доклады</a>
+						<?php $href = esc_url(home_url('/')) . 'conferences'; ?>
+						<a class="nav-link <?php if (mb_strpos($url, $href) === 0) echo 'active' ?>" href='<?php echo $href ?>'>Доклады</a>
 					</li>
 					<li class="nav-item">
-						<?php $href = esc_url(home_url('/')) . 'programs/'; ?>
-						<a class="nav-link <?php if ($url === $href) echo 'active' ?>" href='<?php echo $href ?>'>Свидетельства</a>
+						<?php $href = esc_url(home_url('/')) . 'programs'; ?>
+						<a class="nav-link <?php if (mb_strpos($url, $href) === 0) echo 'active' ?>" href='<?php echo $href ?>'>Свидетельства</a>
 					</li>
 				</ul>
 			</div>

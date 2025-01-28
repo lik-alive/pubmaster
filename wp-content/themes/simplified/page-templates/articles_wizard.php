@@ -107,16 +107,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['Recognize'])) {
 					<div class='col-md-3 info-header'>
 						<span class='required'>*</span>Первая страница:
 					</div>
-					<div class='col-md-9'>
-						<input type='number' id='APageFrom' name='APageFrom' value='<?php echo g_aes($info, 'PageFrom'); ?>' required />
+					<div class='col-md-3'>
+						<input type='text' id='APageFrom' name='APageFrom' value='<?php echo g_aes($info, 'PageFrom'); ?>' required />
 					</div>
 				</div>
 				<div class='row mb-1'>
 					<div class='col-md-3 info-header'>
 						<span class='required'>*</span>Последняя страница:
 					</div>
-					<div class='col-md-9'>
-						<input type='number' id='APageTo' name='APageTo' value='<?php echo g_aes($info, 'PageTo'); ?>' required />
+					<div class='col-md-3'>
+						<input type='text' id='APageTo' name='APageTo' value='<?php echo g_aes($info, 'PageTo'); ?>' required />
 					</div>
 				</div>
 				<div class='row mb-1'>

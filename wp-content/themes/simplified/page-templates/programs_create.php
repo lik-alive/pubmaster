@@ -16,6 +16,11 @@ if (isset($_GET['id'])) {
 	if (empty($info)) g_404();
 	$info = $info[0];
 }
+
+// Load title from POST
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['Recognize'])) {
+	$info['TitleRus'] = json_decode(stripslashes($_POST['Recognize']));
+}
 ?>
 
 <div class='main-panel scrollable'>
