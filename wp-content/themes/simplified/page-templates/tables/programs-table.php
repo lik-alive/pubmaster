@@ -83,6 +83,10 @@
 					}
 				},
 				{
+					'name': 'year',
+					"data": "Year"
+				},
+				{
 					'name': 'pdf',
 					"data": "PDF",
 					'class': 'dt-center sorting',
@@ -115,7 +119,7 @@
 
 		//Upload PDF
 		table.on('click', '.upload-action', function() {
-			window.open('edit/?id=' + table.row($(this).closest('tr')).data().ID_Program, '_blank');
+			window.open(SITE_URL + '/programs/edit/?id=' + table.row($(this).closest('tr')).data().ID_Program, '_blank');
 		});
 
 		//Hide pagination list
@@ -155,6 +159,7 @@
 			<th style='display:none'>ID</th>
 			<th width='30px' style='min-width:30px'>№</th>
 			<th width='100%' style='text-align:center'>Сведения</th>
+			<th width='30px'>Год</th>
 			<th width='30px'>PDF</th>
 		</tr>
 	</thead>
